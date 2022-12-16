@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/utils/Routes.dart';
 
-class LogInPage extends StatelessWidget {
+class LogInPage extends StatefulWidget {
   const LogInPage({super.key});
 
+  @override
+  State<LogInPage> createState() => _LogInPageState();
+}
+
+class _LogInPageState extends State<LogInPage> {
+  String name = "";
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -22,9 +28,9 @@ class LogInPage extends StatelessWidget {
             ),
 
             // Second Widget
-            const Text(
-              'Welcome',
-              style: TextStyle(
+            Text(
+              "Welcome $name",
+              style: const TextStyle(
                 color: Colors.black,
                 fontSize: 28,
                 fontWeight: FontWeight.bold,
@@ -45,6 +51,10 @@ class LogInPage extends StatelessWidget {
                       hintText: "Username",
                       labelText: "Username",
                     ),
+                    onChanged: (value) {
+                      name = value;
+                      setState(() {});
+                    },
                   ),
                   TextFormField(
                     obscureText: true,
