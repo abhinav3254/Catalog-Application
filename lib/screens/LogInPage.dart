@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/utils/Routes.dart';
 
 class LogInPage extends StatelessWidget {
   const LogInPage({super.key});
@@ -67,7 +68,7 @@ class LogInPage extends StatelessWidget {
                 minimumSize: Size(200, 50),
               ),
               onPressed: () {
-                print("Log In Button Clicked");
+                Navigator.pushNamed(context, MyRoutes.homeRoute);
               },
             )
           ],
