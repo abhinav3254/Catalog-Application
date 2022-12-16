@@ -71,16 +71,37 @@ class _LogInPageState extends State<LogInPage> {
               height: 40.0,
             ),
 
-            ElevatedButton(
-              child: Text('Log In'),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.deepOrangeAccent,
-                minimumSize: Size(200, 50),
+            // creating same button using container
+
+            Container(
+              height: 50,
+              width: 150,
+              alignment: Alignment.center,
+              child: const Text(
+                'Log In',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  fontSize: 18,
+                ),
               ),
-              onPressed: () {
-                Navigator.pushNamed(context, MyRoutes.homeRoute);
-              },
+              decoration: BoxDecoration(
+                // when we use decoration we have to define color here not in container
+                color: Colors.deepPurple,
+                borderRadius: BorderRadius.circular(8),
+              ),
             )
+
+            // ElevatedButton(
+            //   child: Text('Log In'),
+            //   style: ElevatedButton.styleFrom(
+            //     backgroundColor: Colors.deepPurple,
+            //     minimumSize: Size(200, 50),
+            //   ),
+            //   onPressed: () {
+            //     Navigator.pushNamed(context, MyRoutes.homeRoute);
+            //   },
+            // )
           ],
         ),
       ),
