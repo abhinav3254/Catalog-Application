@@ -13,7 +13,6 @@ class LogInPage extends StatelessWidget {
             // One widget
             Image.asset(
               'assets/images/loginpng.png',
-              height: 800,
             ),
 
             // adding space between image and text
