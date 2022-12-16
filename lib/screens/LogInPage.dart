@@ -25,7 +25,7 @@ class LogInPage extends StatelessWidget {
               'Welcome',
               style: TextStyle(
                 color: Colors.black,
-                fontSize: 24,
+                fontSize: 28,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -57,13 +57,14 @@ class LogInPage extends StatelessWidget {
             ),
 
             const SizedBox(
-              height: 20.0,
+              height: 40.0,
             ),
 
             ElevatedButton(
               child: Text('Log In'),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.deepOrangeAccent,
+                minimumSize: Size(200, 50),
               ),
               onPressed: () {
                 print("Log In Button Clicked");
