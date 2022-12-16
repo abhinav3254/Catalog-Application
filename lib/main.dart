@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       // home: HomePage(), // removing this make this defualt route using routes
       themeMode: ThemeMode.light,
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
         // fontFamily: GoogleFonts.lato().fontFamily,
