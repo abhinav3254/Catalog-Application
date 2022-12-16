@@ -5,7 +5,13 @@ import 'package:flutter_application_2/screens/LogInPage.dart';
 import 'package:flutter_application_2/utils/Routes.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(
+    RootRestorationScope(
+      // <--fix
+      restorationId: 'root',
+      child: MaterialApp(home: MyApp()),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
